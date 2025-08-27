@@ -5,12 +5,12 @@ from sentence_transformers import SentenceTransformer, util
 import os
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
+os.environ["HF_HOME"] = "./hf_cache"
 
 app = FastAPI()
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", cache_folder="./hf_cache")
 model = model.half() if torch.cuda.is_available() else model
 
 class TextPair(BaseModel):

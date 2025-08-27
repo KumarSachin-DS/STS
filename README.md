@@ -56,9 +56,7 @@ curl -X POST "https://Sachin-kumar-STS.hf.space/predict"
 ## ☁️ Deployment
 
 - **Platform Used:** Hugging Face Spaces  
-- **Why Hugging Face?**
-- Heroku requires credit card details for free credits  
-- Render’s free memory tier was insufficient to build the container  
+- **Why Hugging Face?**  
 - Hugging Face offers a **free, credit-free, hassle-free option**
 
 ---

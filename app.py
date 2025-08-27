@@ -1,9 +1,13 @@
+import torch
 from fastapi import FastAPI
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer, util
 
 app = FastAPI()
-model = SentenceTransformer('all-MiniLM-L6-v2')
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+model = model.half() if torch.cuda.is_available() else model
 
 class TextPair(BaseModel):
     text1: str

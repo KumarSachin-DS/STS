@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer, util
 
 app = FastAPI()
-model = SentenceTransformer('stsb-roberta-large')
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
 class TextPair(BaseModel):
     text1: str

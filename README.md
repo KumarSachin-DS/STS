@@ -37,8 +37,8 @@ This project implements a **Semantic Textual Similarity (STS) model** that quant
 ## ⚙️ Running Locally
 
 1. **Clone this repository**
-https://github.com/KumarSachin-DS/STS.git
-cd STS
+- https://github.com/KumarSachin-DS/STS.git
+- cd STS
 
 2. **Install dependencies**
 pip install -r requirements.txt
